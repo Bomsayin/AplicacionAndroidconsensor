@@ -1,5 +1,6 @@
 package com.intercambiophoto.aplicacionandroi;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,20 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         textViewName.setText(dataSet.get(listPosition).getName());
         textViewDescripcion.setText(dataSet.get(listPosition).getDescripcion());
         imageView.setImageResource(dataSet.get(listPosition).getImage());
+
+        final int finalistPosition = listPosition;
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (finalistPosition >= 0 && finalistPosition < MyData.cardviewsArray.length){
+                    Class<?> targetActivity = MyData.cardviewsArray[finalistPosition];
+
+                    Intent i = new Intent(view.getContext(),targetActivity);
+                    view.getContext().startActivity(i);
+                }
+
+            }
+        });
     }
 
     @Override

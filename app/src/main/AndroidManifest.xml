@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/pompeque2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -22,10 +22,37 @@
 
         </activity>
         <activity
+            android:name=".Intercambios"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Accesorios"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".CompraVenta"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Regalos"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".registro">
         </activity>
         <activity
             android:name=".inicioactivity">
+        </activity>
+        <activity
+            android:name=".Mapa">
+        </activity>
+        <activity
+            android:name=".Gyroscope"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
