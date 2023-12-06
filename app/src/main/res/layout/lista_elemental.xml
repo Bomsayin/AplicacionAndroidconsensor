@@ -62,7 +62,17 @@
                     android:text="Venta de photocards"
                     android:textSize="18dp"
                     android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btnAgregarP"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="Agregarp"
+                    android:text="Agregar produtos">
+
+                </Button>
             </LinearLayout>
+
 
         </RelativeLayout>
     </LinearLayout>

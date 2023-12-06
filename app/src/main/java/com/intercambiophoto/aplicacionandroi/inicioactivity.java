@@ -47,7 +47,7 @@ public class inicioactivity extends AppCompatActivity {
         adapter = new CustomAdapter(data);
         recyclerView.setAdapter(adapter); // Debes establecer el adaptador en el RecyclerView
     }
-    public void btnPhoto(View view) {
+  /*  public void btnPhoto(View view) {
         Intent i = new Intent(this, Intercambios.class);
         startActivity(i);
 
@@ -82,7 +82,12 @@ public class inicioactivity extends AppCompatActivity {
         startActivity(i);
 
 
-    }
+    }*/
+  public void Agregarp(View view) {
+      Intent i = new Intent(this, Agregar.class);
+      startActivity(i);
 
+
+  }
 }
 

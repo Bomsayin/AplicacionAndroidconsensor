@@ -51,6 +51,9 @@
             android:name=".Mapa">
         </activity>
         <activity
+            android:name=".Agregar">
+        </activity>
+        <activity
             android:name=".Gyroscope"
             android:screenOrientation="portrait">
         </activity>
