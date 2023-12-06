@@ -33,6 +33,10 @@ android {
 }
 
 dependencies {
+    //Firestore
+    implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("com.squareup.picasso:picasso:2.8")
+    //otros
     implementation ("org.osmdroid:osmdroid-android:6.1.8")
     implementation ("org.osmdroid:osmdroid-wms:6.1.11")
     implementation("androidx.appcompat:appcompat:1.6.1")
