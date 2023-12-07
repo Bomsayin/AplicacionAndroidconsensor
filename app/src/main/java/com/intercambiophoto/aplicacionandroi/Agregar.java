@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -43,7 +44,7 @@ public class Agregar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar);
         mAuth = FirebaseAuth.getInstance();
-
+        storageReference = FirebaseStorage.getInstance().getReference();
         nombre = findViewById(R.id.Nombreproducto);
         descripcion = findViewById(R.id.descripcion);
         precio = findViewById(R.id.precio);
@@ -77,7 +78,7 @@ public class Agregar extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
     private void subirPhoto(Uri image_url) {
-        Toast.makeText(Agregar.this, "Subiendo Foto", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(Agregar.this, "Subiendo Foto", Toast.LENGTH_SHORT).show();
         String rute_storage_photo = storage_path + "" + photo + "" + mAuth.getUid();
         StorageReference reference = storageReference.child(rute_storage_photo);
         reference.putFile(image_url).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
