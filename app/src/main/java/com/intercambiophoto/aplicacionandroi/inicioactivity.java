@@ -22,6 +22,7 @@ public class inicioactivity extends AppCompatActivity {
     private static ArrayList<DataModel> data;
     private static ArrayList<Integer> removedItems;
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

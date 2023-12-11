@@ -48,7 +48,7 @@ public class Agregar extends AppCompatActivity {
         nombre = findViewById(R.id.Nombreproducto);
         descripcion = findViewById(R.id.descripcion);
         precio = findViewById(R.id.precio);
-        photopc = findViewById(R.id.photopc);
+       // photopc = findViewById(R.id.imageView);
         btnsubirfoto = findViewById(R.id.btnsubirfoto);
         btnagregar = findViewById(R.id.btnagregar);
         btnsubirfoto.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +78,7 @@ public class Agregar extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
     private void subirPhoto(Uri image_url) {
-        //Toast.makeText(Agregar.this, "Subiendo Foto", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(Agregar.this, "Subiendo Foto", Toast.LENGTH_SHORT).show();//lo saque pq no sirve
         String rute_storage_photo = storage_path + "" + photo + "" + mAuth.getUid();
         StorageReference reference = storageReference.child(rute_storage_photo);
         reference.putFile(image_url).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.intercambiophoto.aplicacionandroi"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.intercambiophoto.aplicacionandroi"
@@ -49,4 +49,13 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //MQTT
+    implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+    implementation("com.android.support:support-v4:28.0.0")
+    implementation("com.android.support:localbroadcastmanager:28.0.0")
+    implementation("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1"){
+        exclude ("group:com.android.suppor")
+        exclude("module:appcompat-v7")
+        exclude("module:suppor-v4")
+    }
 }
