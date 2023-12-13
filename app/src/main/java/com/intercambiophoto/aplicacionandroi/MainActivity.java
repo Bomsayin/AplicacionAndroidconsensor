@@ -126,6 +126,16 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    public void cerrarsesion(){
+        Button btnOff = findViewById(R.id.btncerrarsesion);
+        btnOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enviarMensaje(topic, topicMsgOff);
+            }
+        });
+
+    }
     private void connectBroker(){
         this.cliente = new MqttAndroidClient(this.getApplicationContext(), mqttHost, this.clienteId);
         this.opciones = new MqttConnectOptions();
